@@ -31,6 +31,7 @@ const app = new App({
 
 // Optional: Get & log the authenticated app's name
 const { data } = await app.octokit.request('/app')
+console.log(`Authenticated as '${data.name}'`)
 
 // Read more about custom logging: https://github.com/octokit/core.js#logging
 app.octokit.log.debug(`Authenticated as '${data.name}'`)
